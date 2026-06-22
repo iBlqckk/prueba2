@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artemarmol Colombia | Superficies que transforman espacios</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed488",
+                        "surface-container-high": "#eae8e7",
+                        "primary-fixed": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c7c6c5",
+                        "on-secondary-fixed": "#261900",
+                        "outline": "#747878",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "background": "#fbf9f8",
+                        "on-secondary-container": "#785a1a",
+                        "surface-variant": "#e4e2e2",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "tertiary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#838482",
+                        "inverse-primary": "#c8c6c5",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-container-low": "#f5f3f3",
+                        "primary": "#000000",
+                        "surface-container": "#efeded",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-container": "#1a1c1b",
+                        "on-surface-variant": "#444748",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-surface": "#1b1c1c",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-bright": "#fbf9f8",
+                        "inverse-surface": "#303030",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdea5",
+                        "secondary": "#775a19",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-fixed-variant": "#464746",
+                        "primary-container": "#1c1b1b",
+                        "tertiary-fixed": "#e3e2e0",
+                        "surface": "#fbf9f8",
+                        "on-background": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dbd9d9",
+                        "on-primary-container": "#858383"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-upper": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-upper": ["12px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-gold {
+            color: #C5A059;
+        }
+        .bg-gold {
+            background-color: #C5A059;
+        }
+        .border-gold {
+            border-color: #C5A059;
+        }
+        .bg-obsidian {
+            background-color: #1A1A1A;
+        }
+        .text-obsidian {
+            color: #1A1A1A;
+        }
+        .border-obsidian {
+            border-color: #1A1A1A;
+        }
+        
+        .btn-primary {
+            @apply bg-obsidian text-gold border border-gold font-label-upper text-label-upper px-8 py-4 uppercase tracking-[0.15em] transition-all duration-300 hover:bg-gold hover:text-obsidian flex items-center justify-center gap-2;
+        }
+        .btn-secondary {
+            @apply border border-obsidian text-obsidian bg-transparent font-label-upper text-label-upper px-8 py-4 uppercase tracking-[0.15em] transition-all duration-300 hover:bg-obsidian hover:text-surface flex items-center justify-center gap-2;
+        }
+        
+        .whatsapp-fab {
+            @apply fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg z-50 transition-transform hover:scale-110;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .input-field {
+            @apply w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface transition-colors;
+        }
+        
+        .input-label {
+            @apply font-label-upper text-label-upper text-on-surface-variant block mb-1 uppercase;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- 1. FIXED NAVBAR -->
+<nav class="bg-surface dark:bg-surface text-primary dark:text-on-primary w-full sticky top-0 z-50 border-b border-outline dark:border-outline-variant flat no shadows">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-on-primary" href="#">
+                ARTEMARMOL
+            </a>
+<!-- Links (Desktop) -->
+<div class="hidden md:flex space-x-8">
+<a class="font-label-upper text-label-upper text-primary dark:text-secondary-fixed-dim border-b border-primary pb-1 cursor-pointer transition-transform duration-200 active:scale-95" href="#">Inicio</a>
+<a class="font-label-upper text-label-upper text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 cursor-pointer transition-transform duration-200 active:scale-95" href="#">Productos</a>
+<a class="font-label-upper text-label-upper text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 cursor-pointer transition-transform duration-200 active:scale-95" href="#">Proyectos</a>
+<a class="font-label-upper text-label-upper text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 cursor-pointer transition-transform duration-200 active:scale-95" href="#">Nosotros</a>
+<a class="font-label-upper text-label-upper text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 cursor-pointer transition-transform duration-200 active:scale-95" href="#">Contacto</a>
+</div>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<a class="btn-primary" href="#" style="background-color: #25D366; color: white; border-color: #25D366;">
+<span class="material-symbols-outlined" style="font-size: 18px;">chat</span>
+                    Cotiza ahora
+                </a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- 2. HERO -->
+<section class="relative h-[870px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0" data-alt="A breathtaking, wide-angle shot of an ultra-luxury modern kitchen featuring expansive, seamless white marble and black sintered stone countertops. The space is illuminated by soft, natural architectural lighting that highlights the polished textures of the stone against a minimalist, high-contrast dark gray and off-white background. The aesthetic is clean, monumental, and high-end, perfectly suited for a premium modern luxury design style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmB7bCGTj43nS813pXYkGwe-iJef24H7u5IHdNwhg5i7Wqr4gbhUK3oVMc4p4NbxwxaP4Y61yYvaA4Keb_dGsmA5RnY-DTJRr9d6FDevbxv0obglA3BdDzwRfl1_seY8GR1d-xikGhaqtbd1t4eX_uMETSD3SZLztkZTg7vxF5UPcKKU_niMeQwYvorFKCjCf2GRrFmUBA86FjAsFMT-0qCKubDniSbYIwq9OnI2e4mRYIst1r4ATVId1u-0rougw3Zfo8fqI-dLc')">
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center text-white">
+<h1 class="font-display-lg-mobile md:font-display-lg text-white mb-6">Superficies que transforman espacios</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-10 text-surface-container-highest">
+                Mármol, granito y piedra sinterizada de gran formato para cocinas, fachadas y pisos.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="btn-primary w-full sm:w-auto" href="#">Ver proyectos</a>
+<a class="btn-secondary w-full sm:w-auto !border-white !text-white hover:!bg-white hover:!text-black" href="#">
+<span class="material-symbols-outlined">chat</span>
+                    Cotiza gratis por WhatsApp
+                </a>
+</div>
+</div>
+</section>
+<!-- 3. TRUST BAR -->
+<section class="bg-surface-container-low border-b border-outline-variant py-8">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-3">verified</span>
+<p class="font-headline-sm text-headline-sm text-primary">+20 años</p>
+<p class="font-body-md text-body-md text-on-surface-variant">de experiencia</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-3">location_on</span>
+<p class="font-headline-sm text-headline-sm text-primary">+13 puntos</p>
+<p class="font-body-md text-body-md text-on-surface-variant">de venta en Colombia</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-3">architecture</span>
+<p class="font-headline-sm text-headline-sm text-primary">+500 proyectos</p>
+<p class="font-body-md text-body-md text-on-surface-variant">entregados</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-3">handshake</span>
+<p class="font-headline-sm text-headline-sm text-primary">Atención</p>
+<p class="font-body-md text-body-md text-on-surface-variant">personalizada garantizada</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SERVICES -->
+<section class="py-24 md:py-32 bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">¿Qué hacemos por ti?</h2>
+<div class="w-16 h-1 bg-gold mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface border border-outline-variant p-8 group hover:border-gold transition-colors duration-300">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">design_services</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Asesoría y diseño a medida</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Acompañamiento experto desde la conceptualización hasta la selección de la piedra ideal para la arquitectura de tu espacio.
+                    </p>
+<a class="font-label-upper text-label-upper text-primary group-hover:text-gold uppercase flex items-center gap-2 transition-colors" href="#">
+                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface border border-outline-variant p-8 group hover:border-gold transition-colors duration-300">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">inventory_2</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Suministro de materiales premium</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Importación directa de las canteras y fábricas más prestigiosas del mundo, garantizando exclusividad y calidad superior.
+                    </p>
+<a class="font-label-upper text-label-upper text-primary group-hover:text-gold uppercase flex items-center gap-2 transition-colors" href="#">
+                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface border border-outline-variant p-8 group hover:border-gold transition-colors duration-300">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">handyman</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Instalación y acabados profesionales</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Mano de obra calificada y tecnología de precisión para cortes y ensambles impecables que realzan la belleza de cada placa.
+                    </p>
+<a class="font-label-upper text-label-upper text-primary group-hover:text-gold uppercase flex items-center gap-2 transition-colors" href="#">
+                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. CATALOG GRID -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Nuestro Catálogo</h2>
+<div class="w-16 h-1 bg-gold"></div>
+</div>
+<a class="btn-secondary mt-6 md:mt-0" href="#">Ver catálogo completo</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Sinterizada (Large) -->
+<div class="group relative h-96 lg:col-span-2 overflow-hidden border border-outline-variant cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-resolution shot of premium sintered stone slabs stacked in an architectural gallery. The stone features intricate, monumental veining in deep blacks and crisp whites. The lighting is precise and modern, highlighting the sharp geometric edges and smooth surface texture, embodying luxury minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3ZfJFT3XGU7YWvrv8pR2-92lcqhYiqhSYVSWMdhb16CbpDyrp1blE3kx7cV1JvyM3UKMXUGwWJPm-ApbpV_XsHbd5GfObG-VFCZ1HPFWqim33ZxPTTS_X489881zk5sRvj_0gmYYOhVJjoVTEODggOGfBOTw_1Gwr-t7LRu-Mm5HwFf9KuQMBMV5tqfU1hQ8xGdQFQr2ZHY42-k9ZgqLWGbRYrn7a8iqMSwJRy65YhUrfc3aCy0wQKVMVz2XASDXWcy4LwpO98qU')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Piedra Sinterizada</h3>
+<div class="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-4 h-4 bg-gold"></div>
+<span class="font-label-upper text-label-upper uppercase">Explorar</span>
+</div>
+</div>
+</div>
+<!-- Granito -->
+<div class="group relative h-96 overflow-hidden border border-outline-variant cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A stunning slab of exotic dark granite with golden flecks, displayed vertically in a well-lit, minimalist showroom. The surface is polished to a mirror finish, reflecting soft, high-key white lighting. The composition is sharp, high-contrast, and luxurious, focusing entirely on the natural beauty of the stone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4TynI9-w3PU5wJx4sI7Kj9LNOzlN4vqSnNAOGm-GDRHkPg5XndAs6iIBXWtQ-Wf49u8UBoVDN2-BW3BaHYmrd89nkGynUt9k1u-ePJAa3Ypd4TRdWUAwajUFxWQ3gvCd4kgB5Eb9_aFl0GmPZ6D9XdyRKYifXtCDrfHqSiaZfoA41VKysp-Ni8snOfP3INWhBjnfHSEz3OfeTmg8Rhh03Xu6Egl8uQNRGNRc5fZM-hCcYBIsgGpetPm-1l-3NRqxxt4fIu-VHLMI')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Granito</h3>
+<div class="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-4 h-4 bg-gold"></div>
+<span class="font-label-upper text-label-upper uppercase">Explorar</span>
+</div>
+</div>
+</div>
+<!-- Mármol -->
+<div class="group relative h-96 overflow-hidden border border-outline-variant cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A pristine slab of classic white Carrara marble with soft gray veining, standing majestically against an obsidian dark background. The lighting is dramatic yet elegant, emphasizing the smooth, timeless texture of the natural stone. The overall aesthetic is sober, enduring, and representative of modern luxury minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlbhcUr1ND-Ky2c_5KmUkEqgXDV9J8VhhxcfLxhix7K-Utl_ElNzP2hs0KK7GUbLaRIR0dk45ZS7HJxZaYdvQ3_UYlPoTA8zwluC8qAzfgivgCRcxzOimOMmX3LuYZ8ZFJDoscXWwrS0Y4XVBa12NdaEJ-ZJKBm8Z7E2kL-fqOG7bKGG2b1R1_7OArm6zkQ0JBmTDkgGCsXOFDTpoGvx0ruyO-TejAANQo9yr1hJkUIwSOtrWnMSdO6kI35YRppsO0xlfwiUW1cMs')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Mármol</h3>
+<div class="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-4 h-4 bg-gold"></div>
+<span class="font-label-upper text-label-upper uppercase">Explorar</span>
+</div>
+</div>
+</div>
+<!-- Línea Luxury -->
+<div class="group relative h-96 overflow-hidden border border-outline-variant cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed close-up of an ultra-luxury translucent Onyx stone backlit to emit a warm, golden glow. The surrounding environment is completely dark, highlighting the monumental, precise natural patterns within the stone. This image screams high-end craftsmanship and exclusive architectural material selection." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsYHcv5U0s-n1tp8YPLfq8VIAb3CQdv948qLivx2VZHB0DKha9QP6QnDKCEk3KLnE9kA4EA03XDlj5ORitIsh2AzCohJ1rKty-YA1CCfvR1PEuEmQwKymrsBQ1RiO1a0Mn05pqeCTXsTE_ibE-5ReFRbGCVKqMqhWOAJlFqoW0N7sjTHrRQ-MGCl5wItPJuL1219IaaefSNvkaDO-oIBklGMtKVTMJn8eCrChOhHuPrn3vDl8dc5EwfhrultWsX4OCTfknXzz7ouw')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Línea Luxury</h3>
+<div class="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-4 h-4 bg-gold"></div>
+<span class="font-label-upper text-label-upper uppercase">Explorar</span>
+</div>
+</div>
+</div>
+<!-- Mesas -->
+<div class="group relative h-96 overflow-hidden border border-outline-variant cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, modern dining table featuring a massive, perfectly cut slab of black marble with dramatic white veins, set in a sparse, gallery-like white room. The table has minimalist, geometric metal legs. The lighting creates hard, deliberate shadows, anchoring the piece heavily in the space, reflecting precision and modern luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAH978uELq4oCLUFMiRQgwx1SiKVw9k7LA4knm-knXZKzFFmsLTbblPzY6m3csrcU33XjcYAzP1kJhQtyAwpVgkuh2ARDlGYkqerKWU_xSNRcSZLi7I-2PFIPAKi1DUQE4w-MOqtgWmHelRmO_j6qXJi-KZCgFBHeoPMcROxIoIYy93-Do1klcXuNQKBOfOlkzSPF2qxQTuDclFP5rnR-VE4uSkzdgnAca4GG_iYe1-veug1h--y46zNIxt8xTXAf57fgvujf7frZk')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Mesas y Comedores</h3>
+<div class="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-4 h-4 bg-gold"></div>
+<span class="font-label-upper text-label-upper uppercase">Explorar</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. FOOTER -->
+<footer class="bg-tertiary-container dark:bg-black text-on-tertiary-container dark:text-tertiary-fixed w-full py-16 border-t border-outline dark:border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-display-lg text-headline-md text-surface-container-lowest mb-6">
+                    ARTEMARMOL
+                 </div>
+<p class="font-body-md text-body-md max-w-sm">
+                     Superficies que transforman espacios. Especialistas en mármol, granito y piedra sinterizada.
+                 </p>
+</div>
+<div>
+<h4 class="font-label-upper text-label-upper text-surface-container-lowest mb-4 tracking-widest">Enlaces</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors cursor-pointer" href="#">Privacy</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors cursor-pointer" href="#">Careers</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors cursor-pointer" href="#">Blog</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors cursor-pointer" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-upper text-label-upper text-surface-container-lowest mb-4 tracking-widest">Legal</h4>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mt-8">
+                     © 2024 Artemarmol Colombia. Todos los derechos reservados.
+                 </p>
+</div>
+</div>
+</footer>
+<!-- 12. FLOATING WHATSAPP BUTTON -->
+<a aria-label="Chat on WhatsApp" class="whatsapp-fab" href="#">
+<span class="material-symbols-outlined" style="font-size: 32px;">chat</span>
+</a>
+</body></html>
